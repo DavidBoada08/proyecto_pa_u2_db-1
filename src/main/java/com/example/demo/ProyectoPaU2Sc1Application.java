@@ -1,10 +1,15 @@
 package com.example.demo;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.uce.modelo.Ciudadano;
+import com.example.demo.uce.modelo.Empleado;
 import com.example.demo.uce.modelo.Estudiante;
 import com.example.demo.uce.service.IEstudianteService;
 
@@ -29,60 +34,69 @@ public class ProyectoPaU2Sc1Application implements CommandLineRunner {
 		estu.setCiudad("Quito");
 		estu.setGenero("M");
 //		this.estudianteService.agregar(estu);
-
-//		Estudiante estu2 = new Estudiante();
-		estu.setId(2);
-		estu.setNombre("Clare");
-		estu.setApellido("Boada");
-		estu.setCedula("1720030173");
-		estu.setCiudad("Quito");
-		estu.setGenero("F");
-		//this.estudianteService.agregar(estu);
-
-		estu.setId(3);
-		estu.setNombre("Marlon");
-		estu.setApellido("Boada");
-		estu.setCedula("1720030173");
-		estu.setCiudad("Quito");
-		estu.setGenero("F");
-//		this.estudianteService.agregar(estu);
-
-		// Buscar estudiante
-		// this.estudianteService.encontrar(2);
 		
-		//eliminar
-		//this.estudianteService.borrar(2);
+		Ciudadano ciu = new  Ciudadano();
+		ciu.setNombre("David");
+		ciu.setApellido("Boada");
 		
-		//actualzar
+		Empleado empl = new Empleado();
+		empl.setSalario(new BigDecimal(20));
+		empl.setFechaIngreso(LocalDateTime.now());
+		empl.setCiudadano(ciu);
+
+////		Estudiante estu2 = new Estudiante();
+//		estu.setId(2);
+//		estu.setNombre("Clare");
+//		estu.setApellido("Boada");
+//		estu.setCedula("1720030173");
+//		estu.setCiudad("Quito");
+//		estu.setGenero("F");
+//		//this.estudianteService.agregar(estu);
+//
 //		estu.setId(3);
 //		estu.setNombre("Marlon");
-//		this.estudianteService.modificicar(estu);
-
-		estu.setId(4);
-		estu.setNombre("Roberto");
-		estu.setApellido("Boada");
-		estu.setCedula("1720030173");
-		estu.setCiudad("Quito");
-		estu.setGenero("M");
-		//this.estudianteService.agregar(estu);
-		
-		estu.setId(5);
-		estu.setNombre("Julieta");
-		estu.setApellido("Aguacondo");
-		estu.setCedula("1720030173");
-		estu.setCiudad("Quito");
-		estu.setGenero("f");
-		//this.estudianteService.agregar(estu);
-		
-		estu.setId(7);
-		estu.setNombre("Esperanza");
-		estu.setApellido("Aguacondo");
-		estu.setCedula("1720030173");
-		estu.setCiudad("Quito");
-		estu.setGenero("F");
-		this.estudianteService.agregar(estu);
-		
-		
+//		estu.setApellido("Boada");
+//		estu.setCedula("1720030173");
+//		estu.setCiudad("Quito");
+//		estu.setGenero("F");
+////		this.estudianteService.agregar(estu);
+//
+//		// Buscar estudiante
+//		// this.estudianteService.encontrar(2);
+//		
+//		//eliminar
+//		//this.estudianteService.borrar(2);
+//		
+//		//actualzar
+////		estu.setId(3);
+////		estu.setNombre("Marlon");
+////		this.estudianteService.modificicar(estu);
+//
+//		estu.setId(4);
+//		estu.setNombre("Roberto");
+//		estu.setApellido("Boada");
+//		estu.setCedula("1720030173");
+//		estu.setCiudad("Quito");
+//		estu.setGenero("M");
+//		//this.estudianteService.agregar(estu);
+//		
+//		estu.setId(5);
+//		estu.setNombre("Julieta");
+//		estu.setApellido("Aguacondo");
+//		estu.setCedula("1720030173");
+//		estu.setCiudad("Quito");
+//		estu.setGenero("f");
+//		//this.estudianteService.agregar(estu);
+//		
+//		estu.setId(7);
+//		estu.setNombre("Esperanza");
+//		estu.setApellido("Aguacondo");
+//		estu.setCedula("1720030173");
+//		estu.setCiudad("Quito");
+//		estu.setGenero("F");
+//		this.estudianteService.agregar(estu);
+//		
+//		
 		
 
 	}

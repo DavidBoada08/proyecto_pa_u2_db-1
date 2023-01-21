@@ -1,5 +1,8 @@
 package com.example.demo.uce.modelo;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 import javax.annotation.processing.Generated;
 
 import jakarta.persistence.Column;
@@ -25,7 +28,6 @@ public class Estudiante {
 	@SequenceGenerator(name ="estu_sec",sequenceName = "estu_sec",allocationSize = 1)
 	@Column(name = "estu_id")
 	private  Integer id;
-
 	@Column(name = "estu_nombre")
 	private String nombre;
 
@@ -40,11 +42,47 @@ public class Estudiante {
 
 	@Column(name = "estu_ciudad")
 	private String ciudad;
+	
+
+	@Column(name = "estu_hobby")
+	private String hobby;
+	
+
+	@Column(name = "estu_salario")
+	private BigDecimal salario;
+
+	@Column(name = "estu_fechaNacimiento")
+	private LocalDateTime fechaNacimiento;
 
 	
 	//SET y GET
+	
 	public Integer getId() {
 		return id;
+	}
+
+	public BigDecimal getSalario() {
+		return salario;
+	}
+
+	public void setSalario(BigDecimal salario) {
+		this.salario = salario;
+	}
+
+	public LocalDateTime getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public String getHobby() {
+		return hobby;
+	}
+
+	public void setHobby(String hobby) {
+		this.hobby = hobby;
 	}
 
 	public void setId(Integer id) {
@@ -90,9 +128,15 @@ public class Estudiante {
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
+
 	
-	
-	
+    
+
+	@Override
+	public String toString() {
+		return "Estudiante [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", genero=" + genero
+				+ ", cedula=" + cedula + ", ciudad=" + ciudad + "]";
+	}
 	
 	
 	
