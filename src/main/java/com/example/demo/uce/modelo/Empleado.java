@@ -68,14 +68,6 @@ public class Empleado {
 		this.salario = salario;
 	}
 
-	public LocalDateTime getFechaNacimiento() {
-		return fechaNacimiento;
-	}
-
-	public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
-	}
-
 	@Override
 	public String toString() {
 		return "Empleado [id=" + id + ", salario=" + salario + ", fechaNacimiento=" + fechaNacimiento + "]";
